@@ -3,7 +3,9 @@ import Card from "./components/Card";
 import "./App.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
-const API_KEY = "99659b2b7929dfea96aafe1a5d3659f2";
+// const API_KEY = "99659b2b7929dfea96aafe1a5d3659f2";
+import Bulletin from "./components/Bulletin";
+import MainContent from "./components/MainContent";
 
 
  
@@ -34,24 +36,11 @@ function App() {
     <div className="bg-gray-200 pt-5 h-screen justify-center flex  pb-4 overflow-y-hidden">
       <div className="shadow-lg rounded-2xl bg-white px-16 h-screen w-4/5 ">
         <Navbar />
+        <Bulletin />
 
-        <div className=" flex h-36 bg-gray-100 justify-center items-center  mb-8  text-lg">
-          <div>
-            <h2 className="text-sm text-gray-600 pl-44">WELCOME TO BULLETIN</h2>
-
-            <p className="font-bold text-3xl">
-              Craft Narratives that ignite{" "}
-              <span className="text-red-700 "> inspiration ,</span>
-            </p>
-            <p className="text-red-700 pl-5 font-bold text-3xl">
-              {" "}
-              knowledge <span className="text-black">and</span>
-              <span className="text-red-700 "> entertainment</span>
-            </p>
-          </div>
-        </div>
-
-        <div className="flex flex-row gap-16">
+        < MainContent />
+        
+        {/* <div className="flex flex-row gap-16">
           <div class="w-[800px] rounded overflow-hidden ">
             <img
               className="w-full h-64"
@@ -60,6 +49,7 @@ function App() {
             />
           </div>
 
+        
           <div className="p-4">
             <div className="flex ">
               <img
@@ -88,13 +78,12 @@ function App() {
               <span className="text-red-700"> Movies</span> 4 min read
             </p>
           </div>
-        </div>
+        </div> */}
 
         <div className="flex justify-between pt-4">
           <div className="font-semibold text-3xl">Latest News</div>
           <div className="text-red-700">See all →</div>
         </div>
-
         <div className="flex flex-wrap gap-7 mt-4">
           {displayedData?.map((info)=> (
               <Card info={info}/>
